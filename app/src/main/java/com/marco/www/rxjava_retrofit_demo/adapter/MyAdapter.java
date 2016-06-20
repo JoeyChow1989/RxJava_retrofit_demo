@@ -40,7 +40,8 @@ public class MyAdapter extends RecyclerView.Adapter
         debounceViewHolder.descriptionTv.setText(image.description);
     }
 
-    public void setImages(List<Image> images){
+    public void setImages(List<Image> images)
+    {
         this.images = images;
         notifyDataSetChanged();
     }
@@ -51,12 +52,15 @@ public class MyAdapter extends RecyclerView.Adapter
         return images == null ? 0 : images.size();
     }
 
-    static class DebounceViewHolder extends RecyclerView.ViewHolder {
+    static class DebounceViewHolder extends RecyclerView.ViewHolder
+    {
         @Bind(R.id.imageIv)
         ImageView imageIv;
         @Bind(R.id.descriptionTv)
         TextView descriptionTv;
-        public DebounceViewHolder(View itemView) {
+
+        public DebounceViewHolder(View itemView)
+        {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
